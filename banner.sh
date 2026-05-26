@@ -2,12 +2,15 @@ clear
 
 # TITLE
 figlet -f smslant "CYBER SYSTEM" | lolcat
-echo                                                                                    
-# INFO BOX                                                                              cat <<EOF | lolcat
+echo
+
+# INFO BOX
+cat <<EOF | lolcat
 ╔══════════════════════════════════════════╗
-║ USER     : Synone                        ║
+║ USER     : Username                        ║
 ║ DEVICE   : $(getprop ro.product.model)
-║ ANDROID  : $(getprop ro.build.version.release)                                        ║ UPTIME   : $(uptime -p)
+║ ANDROID  : $(getprop ro.build.version.release)
+║ UPTIME   : $(uptime -p)
 ║ BATTERY  : $(termux-battery-status 2>/dev/null | grep percentage | awk '{print $2}' | tr -d ',')%
 ║ DATE     : $(date '+%A, %d %B %Y  %H:%M')
 ║ STATUS   : [■■■■■■■■■■] ONLINE           ║
@@ -16,7 +19,8 @@ echo
 EOF
 
 echo
-                                                                                        # RANDOM HACKER QUOTE
+
+# RANDOM HACKER QUOTE
 quotes=(
   "The quieter you become, the more you can hear."
   "In cyberspace, no one can hear you scream."
@@ -75,3 +79,4 @@ cowsay -f tux "$random_quote" | lolcat -p 0.3 -S 100
 echo "" | lolcat
 
 echo ">>> ACCESS GRANTED <<<" | lolcat
+echo
